@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>数据结构与集合</title>
+    <link href="/2f86bb7d.html"/>
+    <url>/2f86bb7d.html</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="1-数据结构的定义"><a href="#1-数据结构的定义" class="headerlink" title="1.数据结构的定义"></a>1.数据结构的定义</h2><p>数据结构是指逻辑意义上的数据组织方式及相应的处理方式。</p><h3 id="什么是逻辑意义？"><a href="#什么是逻辑意义？" class="headerlink" title="什么是逻辑意义？"></a>什么是逻辑意义？</h3><h3 id="什么是数据的组织方式？"><a href="#什么是数据的组织方式？" class="headerlink" title="什么是数据的组织方式？"></a>什么是数据的组织方式？</h3><p>逻辑意义上的组织方式有很多，比如树、图、队列、哈希等。树可以是二叉树、三叉树、B+树等；图可以是有向图或无向图；队列是先进先出的线性结构；哈希是根据某种算法直接定位的数据组织方式。</p><h3 id="什么是数据处理方式？"><a href="#什么是数据处理方式？" class="headerlink" title="什么是数据处理方式？"></a>什么是数据处理方式？</h3><p>在既定的数据组织方式上，以某种特定的算法实现数据的增加、删除、修改、查询和遍历。不同的数据处理方式往往存在着非常大的性能差异。</p><h2 id="2-数据结构的分类"><a href="#2-数据结构的分类" class="headerlink" title="2.数据结构的分类"></a>2.数据结构的分类</h2><blockquote><p>数据结构是算法实现的基石</p></blockquote><h3 id="线性结构"><a href="#线性结构" class="headerlink" title="线性结构"></a>线性结构</h3><p>0至1个直接前前趋和直接后继。</p><h3 id="树结构"><a href="#树结构" class="headerlink" title="树结构"></a>树结构</h3><p>0至1个直接前趋和0到n个直接后继（n大于或等于2）。</p><h3 id="图结构"><a href="#图结构" class="headerlink" title="图结构"></a>图结构</h3><p>0至n个直接前趋和直接后继（n大于或等于2）。图结构包括简单图、多重图、有向图和无向图等。</p><h3 id="哈希结构"><a href="#哈希结构" class="headerlink" title="哈希结构"></a>哈希结构</h3><p>没有直接的前趋和后继。哈希结构通过某种特定的哈希函数将索引与存储的值关联起来，它是一种查询效率非常高的数据结构。</p><p>PS.如何衡量数据处理的性能？</p><blockquote><p>什么是时间复杂度？<br>算法时间复杂度是一种衡量计算性能的指标，反映了程序执行时间随输入规模增长而增长的量级，在很大程度上能反映出算法性能的优劣与否。<br>而这个量级通常用大写的O和一个函数描述，如O(n^3)表示程序执行时间随输入规模呈现三次方倍的增长。<br>从最好到最坏的常用算法复杂度排序如下：<br>常数级 O(1) &gt; 对数级 O(logn) &gt; 线性级 O(n) &gt; 线性对数级 (n*logn) &gt; 平方级 O(n^2) &gt; 立方级 O(n^3) &gt; 指数级 O(2^n)等。</p></blockquote><p>PS. 数据结构的各种类型没有好坏之分，它只有与场景、数据量结合起来综合考虑才有实际意义。</p><h1 id="集合框架"><a href="#集合框架" class="headerlink" title="集合框架"></a>集合框架</h1><p>Java中的集合框架是用于存储对象的工具类容器，它实现了常用的数据结构，提供了一系列公开的方法用于增加、删除、修改、查找和遍历数据，降低了日常开发成本。</p><h2 id="集合的分类"><a href="#集合的分类" class="headerlink" title="集合的分类"></a>集合的分类</h2><p>集合的种类非常多，形成了一个比较经典的继承关系树，称为Java集合框架图，如下图，<br>框架图中主要分为两类：第一类是按照单个元素存储的 Collection，在继承树中 Set 和 List 都实现了 Collection 接口；第二类是按照 Key-Value 存储的 Map。以上两类集合体系，无论数据存取还是遍历，都存在非常大的差异。<br><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg-blog.csdnimg.cn%2F2021032209221272.png&refer=http%3A%2F%2Fimg-blog.csdnimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652627196&t=cde62a894e43cebe111d1d74e3a03dd2" alt="Java集合框架图"><br>在集合框架图中，红色的代表接口，蓝色代表抽象类，绿色的代表并发包中的类，灰色代表早期线程安全的类（基本已经弃用）。可以看到，与 Collection 相关的4条线分别是 List、Queue、Set、Map，它们的子类会映射到数据结构中的表、树、哈希等。</p><h3 id="List-集合"><a href="#List-集合" class="headerlink" title="List 集合"></a>List 集合</h3><p>List 集合是线性数据结构的的主要体现，集合元素通常存在明确的上一个和下一个元素，也存在明确的第一个元素和最后一个元素。List 集合的遍历结果是稳定的。该体系最常用的是 ArrayList 和 LinkedList 两个集合类。</p><h3 id="Queue-集合"><a href="#Queue-集合" class="headerlink" title="Queue 集合"></a>Queue 集合</h3><p>Queue（队列）是一种先进先出的数据结构，队列是一种特殊的线性表，它只允许在表的一端进行获取操作，在表的另一端进行插入操作。当队列中没有元素时，称为空队列。如 BlockingQueue 的 Buffer（数据缓冲区）场景应用。</p><h3 id="Map-集合"><a href="#Map-集合" class="headerlink" title="Map 集合"></a>Map 集合</h3><p>Map 集合是以 Key-Value 键值对作为存储元素实现的哈希结构，Key 按某种哈希函数计算后是唯一的，Value 则是可以重复的。Map 类提供三种 Collection 视图，在集合框架图中，Map 指向 Collection 箭头仅表示两个类之间的依赖关系。可以使用 KeySet() 查看所有的 Key，使用 values() 查看所有的 Value，使用 entrySet() 查看所有的键值对。最早用于存储键值对的 HashTable 因为性能瓶颈已经被淘汰，而如今广泛使用的 HashMap，线程是不安全的。ConcurrentHashMap 是线程安全的，在 JDK8 中进行了大幅度优化，体现出不错的性能。在多线程并发场景中，优先推荐使用 ConcurrentHashMap，而不是 HashMap。TreeMap 是 Key 有序的 Map 类集合。</p><h3 id="Set-集合"><a href="#Set-集合" class="headerlink" title="Set 集合"></a>Set 集合</h3><p>Set 是不允许出现重复元素的集合类型。Set 体系最常用的是 HashSet、TreeSet 和 LinkedHashSet 三个集合类。HashSet 从源码分析是使用 HashMap 来实现的，只是 Value 固定为一个静态对象，使用 Key 保证集合元素的唯一性，但它不保证集合元素的顺序。TreeSet 也是如此，从源码分析是使用 TreeMap 来实现的，底层为树结构，在添加元素到集合中时，按照某种比较规则将其插入合适的位置，保证插入后的集合仍然是有序的。LinkedHashSet 继承自 HashSet，具有 HashSet 的优点，内部使用链表维护了元素的插入顺序。</p><h2 id="集合的初始化"><a href="#集合的初始化" class="headerlink" title="集合的初始化"></a>集合的初始化</h2><p>集合初始化通常进行分配容量、设置特定参数等相关工作。</p><h3 id="ArrayList-的初始化"><a href="#ArrayList-的初始化" class="headerlink" title="ArrayList 的初始化"></a>ArrayList 的初始化</h3><h3 id="HashMap-的初始化"><a href="#HashMap-的初始化" class="headerlink" title="HashMap 的初始化"></a>HashMap 的初始化</h3><h2 id="数组与集合"><a href="#数组与集合" class="headerlink" title="数组与集合"></a>数组与集合</h2><h2 id="集合与泛型"><a href="#集合与泛型" class="headerlink" title="集合与泛型"></a>集合与泛型</h2><h2 id="元素的比较"><a href="#元素的比较" class="headerlink" title="元素的比较"></a>元素的比较</h2><h3 id="Comparable-和-Comparator"><a href="#Comparable-和-Comparator" class="headerlink" title="Comparable 和 Comparator"></a>Comparable 和 Comparator</h3><h3 id="HashCode-和-equals"><a href="#HashCode-和-equals" class="headerlink" title="HashCode 和 equals"></a>HashCode 和 equals</h3><h2 id="fail-fast-机制"><a href="#fail-fast-机制" class="headerlink" title="fail-fast 机制"></a>fail-fast 机制</h2><h2 id="Map-类集合"><a href="#Map-类集合" class="headerlink" title="Map 类集合"></a>Map 类集合</h2><h3 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h3><h3 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h3><h3 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h3><h3 id="ConcurrentHashMap"><a href="#ConcurrentHashMap" class="headerlink" title="ConcurrentHashMap"></a>ConcurrentHashMap</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>data-structures</tag>
+      
+      <tag>collections</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>谈「程序员」</title>
+    <link href="/65c80e3.html"/>
+    <url>/65c80e3.html</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-JyDrBZiJ" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="415085696" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86" data-fixed="true"></div><p>&emsp;&emsp;聊一聊程序员，或者说是程序员<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="从事软件研发工作">[1]</span></a></sup>这个职业。相当一部分人对程序员是有一定误解的，尤其是根本不了解程序员职业的人。本文将从作者切身体会出发，结合一些客观现象，说说程序员及Ta们的工作。</p><p>&emsp;&emsp;程序员的工作和大多数专业技术性工种一样，需具备足够的专业知识，使用相关的专业工具，开展标准化的工作流程。</p><p>&emsp;&emsp;对程序员来说，计算机就是开展工作的专业工具，工作是需要以计算机<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="这里指我们日常使用的电脑">[2]</span></a></sup>为载体的。民用计算机在中国零几年才开始普及，普通人对计算机的整体认识不够全面，甚至连最基本地组成都是不清楚的，这里简单说下计算机系统的基本组成。我们日常使用的各种电脑，智能手机，穿戴设备等智能电子设备，其实都可以称为微型计算机，它们都是由软件和硬件组成的。什么是软件？我们玩的游戏、微信、抖音、办公软件、Windows操作系统等，这些都是软件。而你所看到的显示器、键盘鼠标、主机及主机内部的构件等等，都统称为硬件。软硬件的配合工作，让我们能在电脑上玩游戏，刷剧，浏览网页等为我们所使用，为我们服务。而程序员，就是编写这些软件的人。他们和计算机打交道，使用计算机能识别的语言，这个语言称之为代码，使用代码构建出软件程序，最终呈现为我们使用的软件产品。所以，程序员的工作，就是在构建这些软件。以后别再说程序员就是修电脑的了…当然，他们可能真的会，特别是有女同学电脑出问题的时候。</p><p>&emsp;&emsp;研发一款软件，也就是开展软件工程。从项目立项开始，大致分为前期准备、中期研发、后期发布，及持续的维护升级。前期准备主要是确定需求和设计及准备相关文档，中期按确定好的设计研发软件，后期整体测试和部署发布，发布后的维护，升级，修复问题等。程序员几乎会参与整个研发周期，着重参与中期研发工作。研发工作其实也是会有分工的。通常，软件研发工作会整体分为前端研发<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="构建与用户交互的界面程序">[3]</span></a></sup>和后端研发<sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="构建软件运行的逻辑处理及数据存取程序">[4]</span></a></sup>，对应的前端程序员和后端程序员，也就是常说的前端和后端。举个例子，我们都用过百度搜索，用户可以在输入框里输入想要搜索的内容，然后点击搜索按钮，最终会展示搜索到的内容列表，在这个例子中，用户看到的页面、输入框、按钮这些程序是由前端研发人员构建的，而最终的搜索结果，是由后端研发人员构建的后端程序拿到用户输入的内容，去数据库<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="存储数据的程序">[5]</span></a></sup>里匹配到相关内容最终响应给前端程序并展示在搜索结果页面，在这个过程中，用户使用这个软件功能很简单，感受到的过程也不复杂，其实是后端程序在默默地处理很多复杂的工作，比如最佳匹配、相关性、排序、时效、地域、搜索速度优化等等，最终目的尽量最快地给百度用户检索出最相关的信息。</p><p>&emsp;&emsp;对程序员的工作有了大概的了解后，我们来说说程序员。</p><p>&emsp;&emsp;程序员也是人，那些认为程序员就是秃头、格子衫、木讷、不懂得生活、单身狗…其实，这些标签不是程序员专属。因为程序员常常活跃于互联网，自嘲加懒得解释，巧合的给人们留下了这样的印象，所以，程序员的形象其实归结于个人形象，不能以一概全地说程序员就是这样的。</p><p>&emsp;&emsp;他们懂得如何利用好一台电脑。由于研发工作建立在电脑上，所以他们对电脑周边是比较了解的，特别是软件相关的，也喜欢折腾各种电脑软件硬件。软件安装/卸载…重装系统…生产软件/工具大全…看剧神器…等等这些电脑软件问题大概率他们都清楚。CPU哪家强…主板选什么品牌…显卡3050怎么样啊…等等电脑硬件问题他们大概率也都了解一些，也热衷于鼓捣各种电子产品，也容易催生出一些数码控。</p><p>&emsp;&emsp;他们习惯理性思考问题。软件研发是基于客观规律实现某种功能，如不符合规律，事实，程序是不能实现的，计算机也不知道如何去工作。举个反例，销售人员推销产品，可能很容易地把产品卖给信赖他的人，并不是产品有多么地好，甚至是不需要这个产品，纯属因为人情、信任，就买下了这个产品，交易过程可以是多纬易变的。而研发软件实现某种功能则与之不同，在计算机这个大环境内，违背了客观规律的功能是实现不了的，不会因为使用的人不同表现出超范围，超规律的功能。计算机也是要遵循特定的规则去识别程序员编写的程序，写的代码逻辑有问题，最终程序表现出的功能也就会有问题，写的代码有错误，程序执行就会错误。这种工作长期带来影响，程序员更容易接收符合逻辑的事物，对待事物会更偏向于理性。</p><p>&emsp;&emsp;他们与时俱进，百折不挠。由于软件产品更新迭代特别快，不论是顺应市场的变化，还是软件技术本身的发展，作为研发人员的程序员们，需要紧跟时代的步伐，持续学习，不断折腾技术和解决问题，最终呈现更好的软件产品。程序员和程序都会有一个不断优化和改进的过程。改bug、找bug、写bug乃他们之常态，也将造就那颗百折不挠的心。</p><p><img src="/65c80e3/robot-fix.jpg">  </p><p>我是阿甘，我们下期见。</p><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>从事软件研发工作<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>这里指我们日常使用的电脑<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span>构建与用户交互的界面程序<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span>构建软件运行的逻辑处理及数据存取程序<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span>存储数据的程序<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>杂谈</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>程序员</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
